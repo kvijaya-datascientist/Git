@@ -1,0 +1,79 @@
+git --version     ----> Installed git version
+git config --global user.name "vijaya kaja"
+git config --global user.email "kvijaya.datascientist@gmail.com"
+git config --list -----> show all our configuration(user specific)
+git config --help
+git init  ---->Git initialize
+rm -rf .git  -----> removes git config on the project
+git status
+git add file.py
+git status
+git reset filename  ---> remoive changes of file 
+git add filename    -----> adding file
+git commit -m "comment for commiting file"
+git log     ----> can see which file we commited & author/user details
+git clone <url> <loc>   ------>cloning repo into some loc
+ls -la -----> for list
+git remote -v    ---->shows repo details
+git branch -a     -----> shows which brach we r in currently
+
+---> pushing changes
+git diff   --> shows changes we done to files
+git status
+git add -A
+git commit -m "commit comment"
+git pull origin master
+git push origin master
+
+---> common workflow
+---> create a branch for desired feature
+git branch cal-divide(new brach name)
+git branch     -----> shows all branches of project
+git checkout cal-divide     ---> moving to new branch
+git status
+git add -filename
+git commit -m "comment"
+---->After commit push branch to remote
+git push -u origin cal-divide
+git branch -a   ---> to see all our branches
+now want to merge cal-divide into master
+git checkout master
+git pull origin master
+git branch --merged
+git merge cal-divide
+git push origin master
+----> Delete a branch
+git branch --merged    ----> shows which branch merged into which branch(cal-divide    master)
+git branch -d cal-divide   ---> deleting branch(cal-divide)
+git branch -a    -----> to see all branches  (here still we can see cal-divide)
+to delete cal-divide from repository, use below command
+git push origin --delete cal-divide
+git branch -a (now we can't see cal-divide)
+
+Example(workflow)
+1 git branch qa
+2 git checkout qa
+3 modify some file(emp.py) and save it 
+4 git status   ----> can see modified file(emp.py)
+5 git add -A  
+6 git commit -m "comment msg"
+7 git push -u origin qa
+8 git checkout master
+9 git pull origin master
+10 git merge qa
+11 git push origin master
+
+
+
+
+
+
+
+
+git pull
+git push
+
+
+  
+
+
